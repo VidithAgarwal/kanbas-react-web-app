@@ -74,7 +74,7 @@ export default function Dashboard() {
           <div>
             <a className="wd-dashboard-course-link"
               href="#/Kanbas/Courses/1234/Home">
-              CS1234 Html JS
+              CS1234 Html
             </a>
             <p className="wd-dashboard-course-title">
               Full Stack software developer
@@ -87,7 +87,7 @@ export default function Dashboard() {
           <div>
             <a className="wd-dashboard-course-link"
               href="#/Kanbas/Courses/1234/Home">
-              CS1234 CSS JS
+              CS1234 CSS
             </a>
             <p className="wd-dashboard-course-title">
               Full Stack software developer
