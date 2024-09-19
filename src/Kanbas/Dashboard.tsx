@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 export default function Dashboard() {
   return (
     <div id="wd-dashboard">
@@ -6,24 +5,109 @@ export default function Dashboard() {
       <h2 id="wd-dashboard-published">Published Courses (12)</h2> <hr />
       <div id="wd-dashboard-courses">
         <div className="wd-dashboard-course">
-          <Link className="wd-dashboard-course-link"
-                to="/Kanbas/Courses/1234/Home">
-            <img src="/images/reactjs.png" width={200} />
-            <div>
-              <h5>
-                 CS1234 React JS
-              </h5>
-              <p className="wd-dashboard-course-title">
-                Full Stack software developer
-              </p>
-              <button> Go </button>
-            </div>
-          </Link>
+          <img src="/images/reactjs.png" width={200} />
+          <div>
+            <a className="wd-dashboard-course-link"
+              href="#/Kanbas/Courses/1234/Home">
+              CS1234 React JS
+            </a>
+            <p className="wd-dashboard-course-title">
+              Full Stack software developer
+            </p>
+            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+          </div>
         </div>
-        <div className="wd-dashboard-course"> ... </div>
-        <div className="wd-dashboard-course"> ... </div>
+        <div className="wd-dashboard-course">
+          <img src="/images/testing.jpg" width={200} />
+          <div>
+            <a className="wd-dashboard-course-link"
+              href="#/Kanbas/Courses/1234/Home">
+              CS1234 Testing JS
+            </a>
+            <p className="wd-dashboard-course-title">
+              Full Stack software developer
+            </p>
+            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+          </div>
+        </div>
+        <div className="wd-dashboard-course">
+          <img src="/images/CICD.png" width={200} />
+          <div>
+            <a className="wd-dashboard-course-link"
+              href="#/Kanbas/Courses/1234/Home">
+              CS1234 CiCD
+            </a>
+            <p className="wd-dashboard-course-title">
+              Full Stack software developer
+            </p>
+            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+          </div>
+        </div>
+        <div className="wd-dashboard-course">
+          <img src="/images/typescript.jpg" width={200} />
+          <div>
+            <a className="wd-dashboard-course-link"
+              href="#/Kanbas/Courses/1234/Home">
+              CS1234 Typescript JS
+            </a>
+            <p className="wd-dashboard-course-title">
+              Full Stack software developer
+            </p>
+            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+          </div>
+        </div>
+        <div className="wd-dashboard-course">
+          <img src="/images/java.jpeg" width={200} />
+          <div>
+            <a className="wd-dashboard-course-link"
+              href="#/Kanbas/Courses/1234/Home">
+              CS1234 Java
+            </a>
+            <p className="wd-dashboard-course-title">
+              Full Stack software developer
+            </p>
+            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+          </div>
+        </div>
+        <div className="wd-dashboard-course">
+          <img src="/images/html.jpeg" width={200} />
+          <div>
+            <a className="wd-dashboard-course-link"
+              href="#/Kanbas/Courses/1234/Home">
+              CS1234 Html JS
+            </a>
+            <p className="wd-dashboard-course-title">
+              Full Stack software developer
+            </p>
+            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+          </div>
+        </div>
+        <div className="wd-dashboard-course">
+          <img src="/images/css.jpeg" width={200} />
+          <div>
+            <a className="wd-dashboard-course-link"
+              href="#/Kanbas/Courses/1234/Home">
+              CS1234 CSS JS
+            </a>
+            <p className="wd-dashboard-course-title">
+              Full Stack software developer
+            </p>
+            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+          </div>
+        </div>
+        <div className="wd-dashboard-course">
+          <img src="/images/javascript.png" width={200} />
+          <div>
+            <a className="wd-dashboard-course-link"
+              href="#/Kanbas/Courses/1234/Home">
+              CS1234 JS
+            </a>
+            <p className="wd-dashboard-course-title">
+              Full Stack software developer
+            </p>
+            <a href="#/Kanbas/Courses/1234/Home"> Go </a>
+          </div>
+        </div>
       </div>
     </div>
-  );
-}
-
+);}
