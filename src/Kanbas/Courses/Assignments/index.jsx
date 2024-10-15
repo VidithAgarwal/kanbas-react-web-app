@@ -38,7 +38,7 @@ export default function Assignments() {
       <IoNewspaperSharp />
       <div className="p-3 flex-grow-1">
         <a
-          className="wd-assignment-link"
+          className="wd-assignment-link "
           href="#/Kanbas/Courses/1234/Assignments/123"
         >
           A1

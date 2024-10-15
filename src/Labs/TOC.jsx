@@ -37,7 +37,7 @@ export default function TOC() {
         </a>
       </li>
       <li className="nav-item">
-        <a id="wd-k" href="https://github.com/VidithAgarwal" className="nav-link">
+        <a id="wd-k" href="https://github.com/karangoyal03" className="nav-link">
           My GitHub
         </a>
       </li>
