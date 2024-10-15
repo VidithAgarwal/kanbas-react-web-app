@@ -6,7 +6,7 @@ import { IoChevronBackCircle } from "react-icons/io5";
 export default function KanbasNavigation() {
     return (
       <div id="wd-kanbas-navigation" className="list-group rounded-0 d-flex flex-column justify-content-center align-items-center">
-      <a id="wd-neu-link" target="_blank" href="https://www.northeastern.edu/" className="list-group-item bg-black border-0"><img src="/images/neu.webp" width="75px" /></a>
+      <a id="wd-neu-link" target="_blank" href="https://www.northeastern.edu/" className="list-group-item bg-black border-0"><img src="images/neu.webp" width="75px" /></a>
       <a id="wd-account-link" href="#/Kanbas/Account" className="list-group-item text-white bg-black text-center border-0"><FaRegCircleUser className="fs-1 text text-white" /><br />Account</a>
       <a id="wd-dashboard-link" href="#/Kanbas/Dashboard" className="list-group-item text-center border-0 bg-white text-danger"><AiOutlineDashboard className="fs-1 text-danger" /><br />Dashboard</a>
       <a id="wd-course-link" href="#/Kanbas/Courses" className="list-group-item text-white bg-black text-center border-0"><LiaBookSolid className="fs-1 text-danger" /><br />Courses</a>
@@ -16,4 +16,3 @@ export default function KanbasNavigation() {
       <a id="wd-landing-page" className="list-group-item text-white bg-black text-center border-0" href="/"><IoChevronBackCircle  className="fs-1 text-danger"/><br />Back to landing page</a>
     </div>
   );}
-  
