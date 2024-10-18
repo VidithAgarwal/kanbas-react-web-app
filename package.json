@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint . --max-warnings=0",
-    "ci-lint": "CI=true eslint . --quiet"
+    "ci-lint": "CI=false eslint . --quiet"
   },
   "eslintConfig": {
     "extends": [
