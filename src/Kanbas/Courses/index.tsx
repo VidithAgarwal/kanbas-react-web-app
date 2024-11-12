@@ -1,4 +1,3 @@
-
 import CoursesNavigation from "./Navigation";
 import { Navigate, Route, Routes ,useParams ,useLocation } from "react-router";
 import Modules from "./Modules";
@@ -7,11 +6,11 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import { FaAlignJustify } from "react-icons/fa";
 import Grades from "./Grades"
-import { courses } from "../Database";
-export default function Courses() {
-  const {_id } = useParams();
-  console.log("inside course page"+_id);
-  const course = courses.find((course) => course._id === _id);
+// import { courses } from "../../src/Kanbas/Database";
+export default function Courses({ courses }: { courses: any[]; }) {
+  const { cid } = useParams();
+  console.log("inside course page"+cid);
+  const course = courses.find((course) => course._id === cid);
   const { pathname } = useLocation();
   return (
     <div id="wd-courses">
