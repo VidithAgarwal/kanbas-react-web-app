@@ -11,7 +11,6 @@ import React, { useState } from "react";
 import {
   addAssignment,
   deleteAssignment,
-  updateAssignment,
   editAssignment,
 } from "./reducer";
 import { useNavigate } from "react-router-dom";
