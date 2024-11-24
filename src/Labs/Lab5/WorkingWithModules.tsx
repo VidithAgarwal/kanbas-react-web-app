@@ -3,9 +3,9 @@ const REMOTE_SERVER = process.env.REACT_APP_REMOTE_SERVER;
 export default function WorkingWithModules() {
     const [module , setModule] = useState({
         id: 1,
-        name: "Karan module",
+        name: "Vidith's module",
         description: "This is a module",
-        course: "This is summer web development course",
+        course: "This is fall web development course",
       });
       const MODULE_API_URL = `${REMOTE_SERVER}/lab5/module`
       return(
