@@ -1,42 +1,51 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import { toggleEnrollment, fetchEnrollments } from "./enrollmentActions";
 
 interface Enrollment {
   user: string;
-  course: string; 
+  course: string;
 }
 
 interface EnrollmentState {
   enrollments: Enrollment[];
+  loading: boolean;
+  error: string | null;
 }
 
 const initialState: EnrollmentState = {
-  enrollments: [], 
+  enrollments: [],
+  loading: false,
+  error: null,
 };
 
 const enrollmentSlice = createSlice({
   name: "enrollment",
   initialState,
-  reducers: {
-    enrollCourse: (state, action: PayloadAction<{ userId: string; courseId: string }>) => {
-      const { userId, courseId } = action.payload;
-      const enrollment: Enrollment = { user: userId, course: courseId };
-
-      if (!state.enrollments.some(en => en.user === userId && en.course === courseId)) {
-        state.enrollments.push(enrollment); 
-      }
-    },
-    unenrollCourse: (state, action: PayloadAction<{ userId: string; courseId: string }>) => {
-      const { userId, courseId } = action.payload;
-
-      state.enrollments = state.enrollments.filter(
-        (enrollment) => !(enrollment.user === userId && enrollment.course === courseId)
-      );
-    },
-    setEnrollments: (state, action: PayloadAction<Enrollment[]>) => {
-      state.enrollments = action.payload; 
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchEnrollments.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchEnrollments.fulfilled, (state, action) => {
+        state.enrollments = action.payload;
+        state.loading = false;
+      })
+      .addCase(fetchEnrollments.rejected, (state, action) => {
+        state.error = action.error.message || "Failed to fetch enrollments";
+        state.loading = false;
+      })
+      .addCase(toggleEnrollment.fulfilled, (state, action) => {
+        const { userId, courseId, isEnrolled } = action.payload;
+        if (isEnrolled) {
+          state.enrollments = state.enrollments.filter(
+            (enrollment) => !(enrollment.user === userId && enrollment.course === courseId)
+          );
+        } else {
+          state.enrollments.push({ user: userId, course: courseId });
+        }
+      });
   },
 });
 
-export const { enrollCourse, unenrollCourse, setEnrollments } = enrollmentSlice.actions;
 export default enrollmentSlice.reducer;
